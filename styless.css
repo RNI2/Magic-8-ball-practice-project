@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+    color:#CCC;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background: linear-gradient(to right bottom, #0b3e81, #093080, #242428, #28282c, #2d2c2f);
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1rem;
+}
+
+.app__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 2rem;
+    font-weight: 300;
+}
+
+.app__info {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    padding:0 1rem;
+    margin:2rem 0;
+}
+
+.magicball__outer {
+    width:300px;
+    height: 300px;
+    background: #111;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2rem 0;
+    box-shadow: 10px 10px 30px rgb(13, 15, 12), -10px -10px 30px #4a4a4a;
+    position:relative;
+    cursor: pointer;
+}
+
+.magicball__inner {
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.magicball__response {
+    text-align: center;
+    font-size: 8rem;
+    color: #222;
+    line-height: 1.2rem;
+}
+
+.magicball__spotlight {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 5px;
+    border-radius: 50%;
+    background: #333;
+    opacity: 0.2;
+}
+
+.magicball__bg__shadow {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    top: 0px;
+    border-radius: 50%;
+    background: #666;
+    opacity:0.2
+}
+
+.magicball__upper__shadow {
+    position: absolute;
+    width: 75px;
+    height: 50px;
+    top:5px;
+    background: #aaa;
+    opacity: 0.8;
+    border-radius: 540%;
+    z-index: 5;
+}
+
+.magicball__lower__shadow {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    top:5px;
+    background: #333;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+
+.animate {
+    animation-name: shake-it;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shake-it {
+    0% {transform: translate(50px,50px) rotate(180deg) scale(3.5,3.5);}
+    10% {transform: translate(25px,25px) rotate(90deg) scale(1.5,1.5);}
+    20% {transform: translate(45px,45px) rotate(45deg) scale(2.5,2.5);}
+    30% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    40% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    50% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    60% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    70% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    80% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    90% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+    100% {transform: translate(0,0) rotate(0deg) scale(1.1,1.1);}
+}
